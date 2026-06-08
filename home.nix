@@ -128,8 +128,8 @@
     rocmPackages.rocminfo
     rocmPackages.rocm-bandwidth-test
 
-    # ── ROCm LLVM (needed for HIP compilation) ─────────────────────────
-    rocmPackages.llvm.hip     # HIP compiler for GPU code
+    # ── ROCm LLVM compiler (for pure-ROCm builds) ─────────────────────
+    rocmPackages.llvm
 
     # ── Terminal eye candy ────────────────────────────────────────────────
     cmatrix

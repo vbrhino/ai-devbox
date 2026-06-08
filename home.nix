@@ -128,8 +128,7 @@
     rocmPackages.rocminfo
     rocmPackages.rocm-bandwidth-test
 
-    # ── ROCm LLVM compiler (for pure-ROCm builds) ─────────────────────
-    rocmPackages.llvm
+    # (HIP/ROCm compilation handled post-swap via system packages)
 
     # ── Terminal eye candy ────────────────────────────────────────────────
     cmatrix

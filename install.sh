@@ -88,6 +88,9 @@ install_ollama
 install_tailscale
 install_python_ml_stack
 install_llamacpp
+install_cloudflared
+install_remote_access_script
+install_openwebui
 
 # ── 8. Set zsh as default shell ──────────────────────────────────────────
 ZSH_PATH="$HOME/.nix-profile/bin/zsh"

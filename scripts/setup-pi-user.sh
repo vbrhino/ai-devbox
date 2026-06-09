@@ -27,6 +27,17 @@ chown -R "$PI_USER:$PI_USER" "$PI_HOME/.ssh"
 chmod 700 "$PI_HOME/.ssh"
 chmod 600 "$PI_HOME/.ssh/authorized_keys"
 
+# Set passwordless sudo
+SUDOERS_FILE="/etc/sudoers.d/$PI_USER"
+if [ ! -f "$SUDOERS_FILE" ]; then
+    echo "$PI_USER ALL=(ALL) NOPASSWD:ALL" > "$SUDOERS_FILE"
+    chmod 440 "$SUDOERS_FILE"
+    echo "Passwordless sudo configured for $PI_USER"
+else
+    echo "Passwordless sudo already configured"
+fi
+
 echo "SSH key added for $PI_USER"
 echo ""
 echo "✅ Done. pi can now SSH in as: pi@100.116.127.78"
+echo "   No password needed for SSH or sudo."
